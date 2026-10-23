@@ -1,12 +1,44 @@
 /* Criar um estilo para página, tais como cores e fontes das letras */
+
 body {
-    font-family: Verdana, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     background-color: #fcf6fc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:rgb(46, 46, 44);
     border: 1px solid #41035d;
     border-radius: 8px;
-    padding: 20px;
+    padding: 100px 20px 20px 20px;
 }
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #eee1fc;
+    color: #1e293b;
+}
+
+/* Propriedade para a imagem de fundo */
+    background-image: url('caminho/para/a/tua-imagem.jpg')
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
 /* Estilo para a seção principal */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #fda5a5;
+    border: 1px solid #CCCCCC;
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+
+}
+
 section {
     background-color: #dfb3f9;
     border: 1px solid #41035d;
@@ -14,13 +46,16 @@ section {
     padding: 20px;
 }
 /* Estilo para os artigos */
+
 article {
-    background-color: #fbf4fa;
+    background-color: #f9f2f9;
     border: 2px solid #41035d;
     border-radius: 8px;
     padding: 20px;
+    text-align: center;
 }
 /* Estilo para o cabeçalho */
+
 h2, h3 {
     /* Toda vez que precisar trocar a cor do texto, declare a tag que contenha o texto que vai trocar de cor e chame o argumento color */
     color: #34032b;
@@ -29,6 +64,7 @@ h2, h3 {
     margin-bottom: 12px;
 }
 /* Cor para a letra de todo o site */
+
 p {
     color: rgb(56, 2, 65);
 }
@@ -39,4 +75,30 @@ p {
     align-items: center;
     justify-content: center;
     padding: 20px;
+}
+.cartao-perfil {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    border: 2px solid #41035d;
+    border-radius: 12px;
+    background-repeat: ;
+}
+.cartao-titulo {
+    font-size: 1.5rem;
+    front-weight: 700;
+}
+.cartao-subtitulo {
+    color: #2563eb;
+    front-weight: 600;
+}
+.cartao-descricao {
+    color: #e2288f;
+}
+.cartao-status {
+    color: #15803d;
+    background-color: rgba(22, 163, 74, 0.1);
+    text-transform: uppercase;
+    border-radius: 9999px;
 }
