@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Segoe UI', sans-serif;
-    background-color: #fcf6fc;
+    /* background-color: #fcf6fc; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,19 +10,15 @@ body {
     border: 1px solid #41035d;
     border-radius: 8px;
     padding: 100px 20px 20px 20px;
-}
-body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #eee1fc;
-    color: #1e293b;
-}
-
-/* Propriedade para a imagem de fundo */
-    background-image: url('caminho/para/a/tua-imagem.jpg')
+    /* Propriedade para a imagem de fundo */
+    background-image: url('/assets/Flu\ 124\ anos.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+
 
 /* Estilo para a seção principal */
 header{
@@ -31,7 +27,7 @@ header{
     left: 0;
     right: 0;
     z-index: 1000;
-    background-color: #fda5a5;
+    background-color: #f4f3f3;
     border: 1px solid #CCCCCC;
     border-radius: 8px;
     padding: 20px;
