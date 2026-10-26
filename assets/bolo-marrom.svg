@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="title desc">
+  <title id="title">Bolo marrom com cereja e lacinho</title>
+  <desc id="desc">Ilustração delicada de um bolo em tons de marrom, com cobertura cremosa, uma cereja no topo e um laço decorativo.</desc>
+  <defs>
+    <linearGradient id="cakeSide" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7A4934"/>
+      <stop offset=".48" stop-color="#9A6247"/>
+      <stop offset="1" stop-color="#6B3D2B"/>
+    </linearGradient>
+    <linearGradient id="frosting" x1="0" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#F4E4CF"/>
+      <stop offset="1" stop-color="#D9B99A"/>
+    </linearGradient>
+    <linearGradient id="cherry" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#B94B50"/>
+      <stop offset="1" stop-color="#762A32"/>
+    </linearGradient>
+  </defs>
+  <!-- soft shadow -->
+  <ellipse cx="200" cy="328" rx="112" ry="14" fill="#4B2B20" opacity=".13"/>
+  <!-- cake body -->
+  <path d="M95 211 C95 194 142 181 200 181 C258 181 305 194 305 211 L305 292 C305 311 258 326 200 326 C142 326 95 311 95 292 Z" fill="url(#cakeSide)"/>
+  <ellipse cx="200" cy="211" rx="105" ry="30" fill="#B98561"/>
+  <!-- frosting drips -->
+  <path d="M95 210 C95 193 142 180 200 180 C258 180 305 193 305 210 C305 221 295 225 286 219 C278 214 278 235 266 237 C252 239 253 220 241 224 C229 229 232 246 218 246 C204 246 207 224 195 225 C182 226 185 242 171 240 C157 238 161 218 148 221 C135 224 136 235 123 231 C111 227 115 215 105 219 C99 221 96 216 95 210 Z" fill="url(#frosting)"/>
+  <ellipse cx="200" cy="209" rx="105" ry="29" fill="url(#frosting)"/>
+  <!-- subtle cake details -->
+  <path d="M113 264 C133 274 147 277 166 279" fill="none" stroke="#C18E6B" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+  <path d="M236 290 C255 286 272 280 285 270" fill="none" stroke="#C18E6B" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+  <circle cx="134" cy="252" r="3" fill="#E8C9AA" opacity=".8"/>
+  <circle cx="270" cy="254" r="3" fill="#E8C9AA" opacity=".8"/>
+  <!-- cherry stem -->
+  <path d="M201 169 C202 151 214 141 227 136" fill="none" stroke="#52613A" stroke-width="5" stroke-linecap="round"/>
+  <path d="M215 145 C225 133 239 135 244 145 C232 150 223 151 215 145 Z" fill="#75804A"/>
+  <!-- cherry -->
+  <circle cx="194" cy="174" r="21" fill="url(#cherry)"/>
+  <ellipse cx="187" cy="166" rx="6" ry="9" transform="rotate(30 187 166)" fill="#F6B3A2" opacity=".72"/>
+  <!-- decorative bow on front -->
+  <path d="M191 273 C176 253 151 252 151 270 C151 285 172 286 194 278 Z" fill="#D8B18D" stroke="#754832" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M207 273 C222 253 247 252 247 270 C247 285 226 286 204 278 Z" fill="#E8C9A8" stroke="#754832" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M194 277 L180 300 L198 294 L205 304 L207 277 Z" fill="#C59672" stroke="#754832" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M204 277 L219 300 L201 294 L195 304 L193 277 Z" fill="#DDB894" stroke="#754832" stroke-width="3" stroke-linejoin="round"/>
+  <ellipse cx="200" cy="275" rx="10" ry="9" fill="#B98561" stroke="#754832" stroke-width="3"/>
+  <circle cx="197" cy="272" r="2.5" fill="#F4E4CF" opacity=".9"/>
+</svg>
