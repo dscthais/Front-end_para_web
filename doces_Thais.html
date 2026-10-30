@@ -23,7 +23,7 @@
         <section id="inicio" class="banner">
             <div class="conteudo">
                 <div class="banner-texto">
-                    <h1>Doces artezanais feitos com amor</h1>
+                    <h1>Doces artesanais feitos com amor</h1>
                     <p>Trabalhamos com encomendas para reuniões corporativas, coffee break, aniversários e revendas.</p>
                     <a class="botao" href="#contato">Fale Comigo</a>
                 </div>
@@ -105,6 +105,51 @@
                         </tr>
                     </tfoot>
                 </table>
+            </div>
+        </section>
+        <section id="contato">
+            <div class="conteudo">
+                <h2>Fale Comigo</h2>
+                <form action="#" method="get">
+                    <div class="campo">
+                        <label for="nome">Seu nome</label>
+                        <input type="text" id="nome" name="nome" placeholder="Ex: Eva Araujo" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="voce@gmail.com" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(21)90000-0000">
+                    </div>
+
+                    <div class="campo">
+                        <label for="assunto">Assunto</label>
+                        <select id="assunto" name="assunto">
+                            <option value="encomenda">Realizar encomenda</option>
+                            <option value="orcamento">Solicitar orçamento</option>
+                            <option value="duvida">Tirar dúvidas</option>
+                        </select>                                
+                    </div>
+
+                    <div>
+                        <fieldset class="campo">
+                            <legend>Como prefere que eu responda?</legend>
+                            <label class="opcao"><input type="radio" name="resposta" value="WhatsApp" checked>WhatsApp</label>
+                            <label class="opcao"><input type="radio" name="resposta" value="email">E-mail</label>
+                        </fieldset>
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Conte o que você precisa e para quando"></textarea>
+                    </div>
+
+                    <button type="submit" class="botao">Enviar Mensagem</button>
+                </form>
             </div>
         </section>
     </main>
