@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet"
-    href="style2.css">
+    <link rel="stylesheet" href="style2.css">
 </head>
+
 <body>
     <header>
         <h1>Doces Thais</h1>
@@ -30,17 +31,22 @@
                 <div class="banner-imagem">
                     <img src="assets/bolo-marrom.svg" alt="Bolo Marrom" width="500" height="300" loading="lazy">
                 </div>
-            </div>    
+            </div>
         </section>
 
         <section id="sobre">
             <div class="conteudo">
                 <h2>Sobre mim</h2>
                 <p>
-                    Sou Thais Araujo, tenho 35 anos, estou no ramo desde os meus 19 anos. Comecei muito nova para ajudar meus custos com a minha graduação, porém percebi que nasci para fazer doces. Isso despertou em mim uma nova habilidade, empreender com amor e conseguir tocar a alma das pessoas através com um docinho. Afinal, quem não ama um doce pós almoço ou pós salgado? rs Se você está em dúvida sobre os meus doces ou a qualidade dos mesmos, entre em contato comigo e solicite uma degustação. Você com certeza irá amar, espero você!
+                    Sou Thais Araujo, tenho 35 anos, estou no ramo desde os meus 19 anos. Comecei muito nova para ajudar
+                    meus custos com a minha graduação, porém percebi que nasci para fazer doces. Isso despertou em mim
+                    uma nova habilidade, empreender com amor e conseguir tocar a alma das pessoas através com um
+                    docinho. Afinal, quem não ama um doce pós almoço ou pós salgado? rs Se você está em dúvida sobre os
+                    meus doces ou a qualidade dos mesmos, entre em contato comigo e solicite uma degustação. Você com
+                    certeza irá amar, espero você!
                 </p>
             </div>
-        </section>  
+        </section>
         <section id="serviços">
             <div class="conteudo">
                 <h2>O que eu faço</h2>
@@ -48,7 +54,8 @@
 
                     <article class="card">
                         <h3>Bolos de Aniversários</h3>
-                        <p>Massa branca, preta ou mescla, recheio delicioso à sua escolha e decoração no tema da sua festa.</p>
+                        <p>Massa branca, preta ou mescla, recheio delicioso à sua escolha e decoração no tema da sua
+                            festa.</p>
                         <p class="card-preco">A partir de R$100,00</p>
                     </article>
 
@@ -132,20 +139,22 @@
                             <option value="encomenda">Realizar encomenda</option>
                             <option value="orcamento">Solicitar orçamento</option>
                             <option value="duvida">Tirar dúvidas</option>
-                        </select>                                
+                        </select>
                     </div>
 
                     <div>
                         <fieldset class="campo">
                             <legend>Como prefere que eu responda?</legend>
-                            <label class="opcao"><input type="radio" name="resposta" value="WhatsApp" checked>WhatsApp</label>
+                            <label class="opcao"><input type="radio" name="resposta" value="WhatsApp"
+                                    checked>WhatsApp</label>
                             <label class="opcao"><input type="radio" name="resposta" value="email">E-mail</label>
                         </fieldset>
                     </div>
 
                     <div class="campo">
                         <label for="mensagem">Mensagem</label>
-                        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Conte o que você precisa e para quando"></textarea>
+                        <textarea id="mensagem" name="mensagem" rows="5"
+                            placeholder="Conte o que você precisa e para quando"></textarea>
                     </div>
 
                     <button type="submit" class="botao">Enviar Mensagem</button>
@@ -153,20 +162,40 @@
             </div>
         </section>
     </main>
+
+    <!-- Script para restringir a inserção de dados fora do padrão: -->
+    <script>
+        const nome = document.getElementById('nome');
+        const email = document.getElementById('email');
+        const telefone = document.getElementById('telefone');
+
+        // Nome: remove tudo que não for letra, espaço, apóstrofo ou hífen
+        nome.addEventListener('input', () => {
+            nome.value = nome.value.replace(/[^\p{L}' \-]/gu, '');
+        });
+
+        // E-mail: não permite espaços
+        email.addEventListener('input', () => {
+            email.value = email.value.replace(/\s/g, '');
+        });
+
+        // Telefone: só números, formatados como (21) 90000-0000
+        telefone.addEventListener('input', () => {
+            const d = telefone.value.replace(/\D/g, '').slice(0, 11);
+            let formatado = d;
+
+            if (d.length > 6) {
+                const corte = d.length === 11 ? 7 : 6;
+                formatado = `(${ d.slice(0, 2) }) ${ d.slice(2, corte) } -${ d.slice(corte)}`;
+            } else if (d.length > 2) {
+                formatado = `(${ d.slice(0, 2) }) ${ d.slice(2) }`;
+            } else if (d.length > 0) {
+                formatado = `(${ d }`;
+            }
+
+            telefone.value = formatado;
+        });
+    </script>
 </body>
-<script>
-function mascaraTelefone(input) {
-  let valor = input.value;
 
-  // 1. Remove tudo que NÃO for dígito (impede letras e símbolos)
-  valor = valor.replace(/\D/g, '');
-
-  // 2. Aplica a formatação do telefone: (XX)XXXXX-XXXX
-  valor = valor.replace(/^(\d{2})(\d)/g, '($1)$2');
-  valor = valor.replace(/(\d{5})(\d)/, '$1-$2');
-
-  // Atualiza o valor do campo
-  input.value = valor;
-}
-</script>
 </html>
