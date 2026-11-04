@@ -154,4 +154,19 @@
         </section>
     </main>
 </body>
+<script>
+function mascaraTelefone(input) {
+  let valor = input.value;
+
+  // 1. Remove tudo que NÃO for dígito (impede letras e símbolos)
+  valor = valor.replace(/\D/g, '');
+
+  // 2. Aplica a formatação do telefone: (XX)XXXXX-XXXX
+  valor = valor.replace(/^(\d{2})(\d)/g, '($1)$2');
+  valor = valor.replace(/(\d{5})(\d)/, '$1-$2');
+
+  // Atualiza o valor do campo
+  input.value = valor;
+}
+</script>
 </html>
